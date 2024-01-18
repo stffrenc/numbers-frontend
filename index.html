@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    Hello world!
+    <section>
+        <h2>Arithmetic</h2>
+        <input id="operand1"/> 
+        <label>+</label>
+        <input id="operand2"/>
+        <button onclick="add()">=</button>
+        <label id="sum"></label>  
+    </section>
+    <script>
+        function add() {
+            let operand1Input = document.getElementById("operand1");
+            let operand2Input = document.getElementById("operand2");
+            let sum = Number(operand1Input.value) + Number(operand2Input.value);
+            document.getElementById("sum").innerText = sum;
+        }
+    </script>
 </body>
 </html>
