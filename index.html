@@ -33,16 +33,13 @@
         </div>
         <div class="column">
             <section>
-                <h2>Prime check</h2>
-                
+                <h2>Prime check</h2>                
                 <label>Number to test:</label>
-                <input id="primeNumber"/>
+                <input id="numberToTest"/>
                 <button onclick="isPrime()">Check</button>
                 <label id="primeCheckResult"></label>  
-            </section>
-           
-        </div>
-       
+            </section>           
+        </div>       
      </div>
     
    
@@ -55,6 +52,14 @@
             const response = await fetch("https://arithmetic-service.onrender.com/add/" + n + "/" + m);
             const sum = await response.json();
             document.getElementById("sum").innerText = sum;
+        }
+
+        async function isPrime() {
+            const numberToTest = document.getElementById("numberToTest");            
+            let n = numberToTest.value;            
+            const response = await fetch("???" + n);
+            const result = await response.json();
+            document.getElementById("primeCheckResult").innerText = result;
         }
     </script>
 </body>
